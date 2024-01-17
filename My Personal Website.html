@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelo Ebrada's Personal Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('backg.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #b4b4b4;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: rgba(255, 255, 255, 0.8); 
+      border-radius: 10px;
+    }
+
+    .content {
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Personal Website</h1>
+  </header>
+
+  <nav>
+    <a onclick="showContent('aboutme')">Angelo</a>
+    <a onclick="showContent('skills')">Skills</a>
+    <a onclick="showContent('interests')">Interests</a>
+    <a onclick="showContent('projects')">Projects</a>
+    <a onclick="showContent('achievements')">Achievements</a>
+  </nav>
+
+  <main>
+    <div id="aboutme" class="content">
+      <h2>About Me</h2>
+      <img src="trp.jpg" alt="Your Alt Text" style="width: 200px; height: 200px; border-radius: 50%;">
+      <p>
+        Im Angelo Ebrada, an aspiring IT professional currently dedicated to pursuing my Bachelor of Science in Information Technology (BSIT). 
+        With a fervent passion for technology, I find myself consistently captivated by the expansive domain of computer science, the intricacies of software development, and the continuous evolution of the digital landscape. 
+        This academic journey not only fuels my intellectual curiosity but also propels me towards a deeper understanding of the dynamic and innovative aspects of the IT field. 
+        I am excited to contribute my skills and knowledge to the ever-growing world of technology
+      </p>
+    </div>
+
+    <div id="skills" class="content">
+      <h2>Skills</h2>
+      <p>I possess a solid foundation in Python, leveraging its versatility for various applications, from data analysis to web development. 
+        Additionally, I have gained familiarity with C#, allowing me to explore desktop and cross-platform development. 
+        Currently, I am actively expanding my proficiency in both languages, delving into advanced concepts and staying abreast of the latest developments. 
+        Moreover, my learning journey extends to encompassing HTML and JavaScript, where I am acquiring the essential skills for crafting dynamic and interactive web experiences.
+    </p>
+    </div>
+
+    <div id="interests" class="content">
+      <h2>Interests</h2>
+      <p>
+        "I am deeply committed to staying abreast of the latest trends and advancements in technology, recognizing the importance of continuous learning in this rapidly evolving field. 
+        My enthusiasm extends beyond the classroom, as I actively seek opportunities to contribute to open-source projects, allowing me to collaborate with the global tech community and make meaningful contributions.</p>
+        <p>In addition to my professional pursuits, I find joy in tackling complex programming challenges, viewing each obstacle as an opportunity for growth and innovation. 
+        My passion for learning extends to exploring new programming languages, broadening my skill set and adaptability in the ever-expanding technological landscape.</p>
+        <p>Beyond the realm of technology, I enjoy fostering connections and camaraderie by engaging in online gaming with friends. This not only serves as a recreational activity but also cultivates teamwork and strategic thinking.</p>
+        <p>Furthermore, I am an avid traveler, drawn to the exploration of diverse cultures and landscapes. This wanderlust not only provides me with a broader perspective but also serves as a source of inspiration for creativity and problem-solving. 
+        Altogether, these diverse interests contribute to my holistic approach to personal and professional development."
+      </p>
+    </div>
+
+    <div id="achievements" class="content">
+        <h2>Achievements</h2>
+        <p>
+            Despite not having a list of concrete achievements at the moment, 
+            I am actively laying the groundwork and strategizing to attain significant milestones in my academic and professional endeavors. 
+            This forward-looking approach reflects my dedication to continuous improvement and the pursuit of excellence in my future undertakings.
+        </p>
+      </div>
+
+    </div>
+    <div id="projects" class="content">
+        <h2>Projects</h2>
+        <p>
+            Despite not having a list of concrete achievements at the moment, 
+            I am actively laying the groundwork and strategizing to attain significant milestones in my academic and professional endeavors. 
+            This forward-looking approach reflects my dedication to continuous improvement and the pursuit of excellence in my future undertakings.
+        </p>
+      </div>
+
+  </main>
+
+  <script>
+    document.querySelectorAll('.content').forEach(function(content, index) {
+        content.style.display = index === 0 ? 'block' : 'none';
+    });
+
+    function showContent(contentId) {
+      var allContents = document.querySelectorAll('.content');
+      allContents.forEach(function(content) {
+        content.style.display = 'none';
+      });
+
+      var selectedContent = document.getElementById(contentId);
+      selectedContent.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
